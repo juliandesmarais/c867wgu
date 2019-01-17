@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <iostream>
 #include "degree.h"
 #include "student.h"
 
@@ -35,12 +36,41 @@ void Student::setAge(int age) {
 
 void Student::setDegreeProgram(Degree::DegreeType type) {
 	this->degreeProgram = type;
+
+	switch (type)
+	{
+	case Degree::SECURITY:
+		this->degreeProgramString = "SECURITY";
+		break;
+	case Degree::NETWORK:
+		this->degreeProgramString = "NETWORK";
+		break;
+	case Degree::SOFTWARE:
+		this->degreeProgramString = "SOFTWARE";
+		break;
+	case Degree::NONE:
+		this->degreeProgramString = "NONE";
+		break;
+	default:
+		break;
+	}
 }
 
 void Student::setDaysToCompleteEachCourse(int *daysToCompleteEachCourse) {
 	for (int i = 0; i < 3; i++) {
 		this->daysToCompleteEachCourse[i] = daysToCompleteEachCourse[i];
 	}
+}
+
+void Student::resetStudentData()
+{
+	setStudentId(NULL);
+	setFirstName(NULL);
+	setLastName(NULL);
+	setEmailAddress(NULL);
+	setAge(NULL);
+	setDaysToCompleteEachCourse(NULL);
+	setDegreeProgram(Degree::DegreeType::NONE);
 }
 
 string Student::getStudentId() {
@@ -59,10 +89,33 @@ string Student::getEmailAddress() {
 	return this->emailAddress;
 }
 
+string Student::getDegreeProgramString()
+{
+	return this->degreeProgramString;
+}
+
 int Student::getAge() {
 	return this->age;
 }
 
 int *Student::getDaysToCompleteEachCourse() {
 	return this->daysToCompleteEachCourse;
+}
+
+Degree::DegreeType Student::getDegreeProgram()
+{
+	return Degree::DegreeType::SOFTWARE;
+}
+
+void Student::print()
+{
+	int* days = getDaysToCompleteEachCourse();
+
+	cout << getStudentId() << "\t";
+	cout << "First Name: " << getFirstName() << "\t";
+	cout << "Last Name: " << getLastName() << "\t";
+	cout << "Age: " << getAge() << "\t";
+	cout << "\t Days in Courses: " << days[0] << "," << days[1] << "," << days[2] << "\t";
+	cout << "Degree Program: " << getDegreeProgramString();
+	cout << endl;
 }

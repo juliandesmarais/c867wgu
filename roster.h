@@ -20,13 +20,13 @@ public:
 	Roster();
 	~Roster();
 
-	int rosterStudentIndex;
+	int rosterStudentIndex = 0;
 	void extractStudentData();
 	void remove(string studentId);
 	void printAll();
 	void printDaysInCourse(string studentId);
 	void printInvalidEmails();
-	void printByDegreeProgram(Degree degreeProgram);
+	void printByDegreeProgram(Degree::DegreeType degreeProgram);
 	void add(string studentID, string firstName, string lastName, string emailAddress,
 		int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, Degree::DegreeType degreeProgram);
 

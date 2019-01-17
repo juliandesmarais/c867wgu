@@ -2,7 +2,7 @@
 
 NetworkStudent::NetworkStudent(string studentId, string firstName, string lastName, string emailAddress, int age, int *daysToCompleteEachCourse, Degree::DegreeType degreeType) :
 	Student(studentId, firstName, lastName, emailAddress, age, daysToCompleteEachCourse, degreeType) {
-	degreeType = Degree::DegreeType::NETWORKING;
+	degreeType = Degree::DegreeType::NETWORK;
 }
 
 Degree::DegreeType NetworkStudent::getDegreeProgram() {

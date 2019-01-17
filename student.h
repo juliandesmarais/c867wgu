@@ -8,6 +8,7 @@ private:
 	string firstName;
 	string lastName;
 	string emailAddress;
+	string degreeProgramString;
 	int age;
 	Degree::DegreeType degreeProgram;
 	int daysToCompleteEachCourse[3];
@@ -25,11 +26,13 @@ public:
 	void setAge(int age);
 	void setDegreeProgram(Degree::DegreeType degreeType);
 	void setDaysToCompleteEachCourse(int*);
+	void resetStudentData();
 
 	string getStudentId();
 	string getFirstName();
 	string getLastName();
 	string getEmailAddress();
+	string getDegreeProgramString();
 	int getAge();
 	int *getDaysToCompleteEachCourse();
 

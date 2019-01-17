@@ -50,8 +50,5 @@
     <ClCompile Include="..\student.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="julianDesMaraisC867.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

@@ -128,7 +128,6 @@
     <ClCompile Include="..\securityStudent.cpp" />
     <ClCompile Include="..\softwareStudent.cpp" />
     <ClCompile Include="..\student.cpp" />
-    <ClCompile Include="julianDesMaraisC867.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
