@@ -5,7 +5,7 @@
 
 class NetworkStudent : public Student {
 public:
-	NetworkStudent(string studentId, string firstName, string lastName, string emailAddress, int age, int *daysToCompleteEachCourse, Degree::DegreeType degreeType);
+	NetworkStudent(string studentId, string firstName, string lastName, string emailAddress, int age, int *daysToCompleteEachCourse);
 	Degree::DegreeType getDegreeProgram() override;
 
 private:

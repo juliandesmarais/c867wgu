@@ -20,6 +20,7 @@ public:
 	Roster();
 	~Roster();
 
+	Student** getClassRosterArray();
 	int rosterStudentIndex = 0;
 	void extractStudentData();
 	void remove(string studentId);

@@ -12,7 +12,11 @@ Student::Student(string studentId, std::string firstName, std::string lastName, 
 	this->setAge(age);
 	this->setDaysToCompleteEachCourse(daysToCompleteEachCourse);
 	this->setDegreeProgram(type);
-};
+}
+
+Student::~Student()
+{
+}
 
 void Student::setStudentId(string studentId) {
 	this->studentId = studentId;
@@ -62,17 +66,6 @@ void Student::setDaysToCompleteEachCourse(int *daysToCompleteEachCourse) {
 	}
 }
 
-void Student::resetStudentData()
-{
-	setStudentId(NULL);
-	setFirstName(NULL);
-	setLastName(NULL);
-	setEmailAddress(NULL);
-	setAge(NULL);
-	setDaysToCompleteEachCourse(NULL);
-	setDegreeProgram(Degree::DegreeType::NONE);
-}
-
 string Student::getStudentId() {
 	return this->studentId;
 }
@@ -104,7 +97,7 @@ int *Student::getDaysToCompleteEachCourse() {
 
 Degree::DegreeType Student::getDegreeProgram()
 {
-	return Degree::DegreeType::SOFTWARE;
+	return Degree::NONE;
 }
 
 void Student::print()
